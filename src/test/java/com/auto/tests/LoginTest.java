@@ -25,7 +25,6 @@ public class LoginTest extends BaseTest {
 	public void loginTest() {
 		LoginPage loginPage = new LoginPage(getDriver());
 		loginPage.loginIntoApplication("standard_user", "secret_sauce");
-		
 		waitForElementTobeVisble(getDriver(), getDriver().findElement(By.xpath("//div[@class='app_logo']")));
 		String title = getDriver().findElement(By.xpath("//div[@class='app_logo']")).getText();
 		System.out.println("The title of the page is ::"+title);

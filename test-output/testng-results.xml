@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-22T09:56:05 GMT-08:00" name="Default suite" finished-at="2023-11-22T09:56:10 GMT-08:00" duration-ms="4847">
+  <suite started-at="2023-11-23T09:47:52 GMT-08:00" name="Default suite" finished-at="2023-11-23T09:48:11 GMT-08:00" duration-ms="18993">
     <groups>
     </groups>
-    <test started-at="2023-11-22T09:56:05 GMT-08:00" name="Default test" finished-at="2023-11-22T09:56:10 GMT-08:00" duration-ms="4847">
-      <class name="com.auto.tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.auto.tests.LoginTest@4944252c]" started-at="2023-11-22T09:56:05 GMT-08:00" name="setUp" finished-at="2023-11-22T09:56:09 GMT-08:00" duration-ms="3687" status="PASS">
+    <test started-at="2023-11-23T09:47:52 GMT-08:00" name="Default test" finished-at="2023-11-23T09:48:11 GMT-08:00" duration-ms="18993">
+      <class name="com.auto.tests.AddToCartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.auto.tests.AddToCartTest@41fecb8b]" started-at="2023-11-23T09:47:52 GMT-08:00" name="setUp" finished-at="2023-11-23T09:47:55 GMT-08:00" duration-ms="3645" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginTest()[pri:0, instance:com.auto.tests.LoginTest@4944252c]" started-at="2023-11-22T09:56:09 GMT-08:00" name="loginTest" finished-at="2023-11-22T09:56:10 GMT-08:00" duration-ms="714" status="PASS">
+        <test-method signature="addToCartTest()[pri:0, instance:com.auto.tests.AddToCartTest@41fecb8b]" started-at="2023-11-23T09:47:55 GMT-08:00" name="addToCartTest" finished-at="2023-11-23T09:48:10 GMT-08:00" duration-ms="14967" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.auto.tests.LoginTest@4944252c]" started-at="2023-11-22T09:56:10 GMT-08:00" name="tearDown" finished-at="2023-11-22T09:56:10 GMT-08:00" duration-ms="382" status="PASS">
+        </test-method> <!-- addToCartTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.auto.tests.AddToCartTest@41fecb8b]" started-at="2023-11-23T09:48:10 GMT-08:00" name="tearDown" finished-at="2023-11-23T09:48:11 GMT-08:00" duration-ms="318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.auto.tests.LoginTest -->
+      </class> <!-- com.auto.tests.AddToCartTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
