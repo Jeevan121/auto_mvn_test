@@ -17,7 +17,6 @@ public class BasePage {
 	}
 	
 	public BasePage(WebDriver driver) {
-		//PageFactory.initElements(driver, this);
 		this.driver=driver;
 	}
 	
@@ -40,6 +39,12 @@ public class BasePage {
 	public void safe_click(WebElement element) {
 		waitForElementTobeClickable(driver,element);
 		element.click();
+	}
+	
+	public String get_text(WebElement element) {
+		waitForElementTobeVisble(driver,element);
+		String data = element.getText();
+		return data;
 	}
 
 }

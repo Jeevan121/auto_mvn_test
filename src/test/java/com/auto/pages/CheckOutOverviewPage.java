@@ -5,9 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CheckOutOverviewPage {
+import com.auto.utils.BasePage;
+
+public class CheckOutOverviewPage extends BasePage{
 	
 	public CheckOutOverviewPage(WebDriver driver) {
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	

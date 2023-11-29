@@ -1,12 +1,7 @@
 package com.auto.utils;
-
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseTestV1 {
 	
@@ -25,19 +20,13 @@ public class BaseTestV1 {
 	}
 	
 	BasePage basePage= null;
-	
 	public BasePage getBasePage() {
 		    if(basePage == null) {
 		      basePage = new BasePage(getDriver());
 		    }
 		    return basePage;
-		}
+	}
 	 
 
-	public void waitForElementTobeVisble(WebDriver driver,WebElement elem) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
-		wait.until(ExpectedConditions.visibilityOf(elem));
-		
-	}
-
+	
 }
