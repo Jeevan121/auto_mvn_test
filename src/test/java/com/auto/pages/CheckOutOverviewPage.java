@@ -19,5 +19,15 @@ public class CheckOutOverviewPage extends BasePage{
 	
 	@FindBy(id = "finish")
 	public WebElement finishBtn;
+	
+	public String getCheckoutOverviewTitle() {
+		String title = get_text(checkOutOverViewTitle);
+		return title;
+	}
+	
+	public void click_on_finish_btn() {
+		safe_click(finishBtn);
+		
+	}
 
 }

@@ -19,5 +19,14 @@ public class CartPage extends BasePage{
 	
 	@FindBy(xpath = "//button[@id='checkout']")
 	public WebElement checkoutBtn;
+	
+	public String getCartTitle() {
+		String title1 = get_text(cartTitle);
+		return title1;
+	}
+	
+	public void click_on_checkout_btn() {
+		safe_click(checkoutBtn);
+	}
 
 }

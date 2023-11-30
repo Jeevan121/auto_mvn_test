@@ -29,5 +29,17 @@ public class CheckOutPage extends BasePage{
 	@FindBy(id = "continue")
 	public WebElement continueBtn;
 	
+	public String getCheckoutTitle() {
+		String title = get_text(checkOutTitle);
+		return title;
+	}
+	
+	public void enter_check_out_details(String firstName,String lastName,String zipCode) {
+		safe_type(firstNameTxt, firstName);
+		safe_type(lastNameTxt, lastName);
+		safe_type(zipCodeTxt, zipCode);
+		safe_click(continueBtn);
+	}
+	
 	
 }

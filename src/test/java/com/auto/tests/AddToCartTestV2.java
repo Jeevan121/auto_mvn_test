@@ -49,34 +49,31 @@ public class AddToCartTestV2 extends BaseTestV1{
 	
 		
 		//validating the Cart Page Title as Your Cart
-		String actualCartTitle = getBasePage().get_text(cartPage.cartTitle);
+		String actualCartTitle = cartPage.getCartTitle();
 		Assert.assertEquals(actualCartTitle, "Your Cart","Cart Title is not matching");
 		
 		Thread.sleep(3000);
 		
 		//Clicking on the checkout button
-		getBasePage().safe_click(cartPage.checkoutBtn);
+		cartPage.click_on_checkout_btn();
 		
 		
 		Thread.sleep(3000);
 		//validating the Cart Page Title as Your Cart
-		String actualCheckOutTitle = getBasePage().get_text(checkOutPage.checkOutTitle);
+		String actualCheckOutTitle = checkOutPage.getCheckoutTitle();
 		Assert.assertEquals(actualCheckOutTitle, "Checkout: Your Information","Checkout Title is not matching");
-
-		getBasePage().safe_type(checkOutPage.firstNameTxt, "Auto");
-		getBasePage().safe_type(checkOutPage.lastNameTxt, "Test");
-		getBasePage().safe_type(checkOutPage.zipCodeTxt, "1234");
-		getBasePage().safe_click(checkOutPage.continueBtn);
+		
+		checkOutPage.enter_check_out_details("Auto", "Test", "1234");
 
 		Thread.sleep(3000);
 		
-		String actualCheckOutOverViewTitle = getBasePage().get_text(checkOutOverviewPage.checkOutOverViewTitle);
+		String actualCheckOutOverViewTitle = checkOutOverviewPage.getCheckoutOverviewTitle();
 		
 		Assert.assertEquals(actualCheckOutOverViewTitle, "Checkout: Overview","Checkout Over view Title is not matching");
-		getBasePage().safe_click(checkOutOverviewPage.finishBtn);
+		checkOutOverviewPage.click_on_finish_btn();
 
 		Thread.sleep(3000);
-		String actualOrderCompleteTitle = getBasePage().get_text(orderCompletePage.orderCompleteTitle);
+		String actualOrderCompleteTitle = orderCompletePage.getOrderCompleteTitle();
 		Assert.assertEquals(actualOrderCompleteTitle, "Thank you for your order!","order complete Title is not matching");
 		
 	}

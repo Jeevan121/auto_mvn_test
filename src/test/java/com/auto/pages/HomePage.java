@@ -36,14 +36,14 @@ public class HomePage extends BasePage {
 		return title1;
 	}
 	
-	public HomePage click_on_add_to_cart() {
+	public void click_on_add_to_cart() {
 		safe_click(addToCartBtn);
-		return this;
+		
 	}
 	
-	public HomePage click_on_shopping_cart_icon() throws InterruptedException {
+	public void click_on_shopping_cart_icon() throws InterruptedException {
 		Thread.sleep(1000);
 		safe_click(shoppingCartIcon);
-		return this;
+		
 	}
 }

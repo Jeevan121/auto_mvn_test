@@ -34,6 +34,7 @@ public class AddToCartTestV1 extends BaseTestV1{
 	public void addToCartTest() throws InterruptedException {
 		
 		loginPage.loginIntoApplication("standard_user", "secret_sauce");
+		
 		//Validating the Home Page Title
 		String actualTitle = getBasePage().get_text(homePage.title);
 		Assert.assertEquals(actualTitle, "Swag Labs","Home Page Title is not matching");
