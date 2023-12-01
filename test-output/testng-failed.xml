@@ -6,7 +6,7 @@
       <class name="com.auto.tests.LoginTestV3">
         <methods>
           <include name="tearDown"/>
-          <include name="loginTestV3" invocation-numbers="2"/>
+          <include name="loginTestV3"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.auto.tests.LoginTestV3 -->

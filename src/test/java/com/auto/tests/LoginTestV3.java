@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import com.auto.dataprovider.DataProviderUtils;
 import com.auto.pages.HomePage;
 import com.auto.pages.LoginPageV1;
+import com.auto.utils.AutoConfigs;
 import com.auto.utils.BaseTestV1;
 
 
@@ -19,7 +20,7 @@ public class LoginTestV3 extends BaseTestV1 {
 	@BeforeMethod
 	public void setUp() {
 		
-		launchApp("https://www.saucedemo.com/");
+		launchApp(AutoConfigs.application_url);
 	    loginPage = new LoginPageV1(getDriver());
 	    homePage = new HomePage(getDriver());
 

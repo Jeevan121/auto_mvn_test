@@ -16,5 +16,13 @@ public class DataProviderUtils {
 			    return objReturn;
 
 	  }
+	  
+	  @DataProvider(name="addToCartTestV3")
+	  public static Object[][] addToCartTestV3(){
+		  final Object[][] objReturn = ExcelUtils.getTableArray(
+			        System.getProperty("user.dir") +File.separator+"testdata"+File.separator+"Automation_Test_Input_Data.xls", "demo", "addToCartTestV3");
+			    return objReturn;
+
+	  }
 	
 }
