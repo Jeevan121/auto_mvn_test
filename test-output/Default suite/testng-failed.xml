@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.auto.tests.LoginTestV3">
+      <class name="com.auto.tests.api.SingleUserApiGetTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="loginTestV3"/>
-          <include name="setUp"/>
+          <include name="singleUserApiGetTest"/>
         </methods>
-      </class> <!-- com.auto.tests.LoginTestV3 -->
+      </class> <!-- com.auto.tests.api.SingleUserApiGetTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
