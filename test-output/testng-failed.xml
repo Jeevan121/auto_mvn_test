@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.auto.tests.api.SingleUserApiGetTest">
+      <class name="com.auto.tests.api.SingleUserApiGetTestV1">
         <methods>
           <include name="singleUserApiGetTest"/>
         </methods>
-      </class> <!-- com.auto.tests.api.SingleUserApiGetTest -->
+      </class> <!-- com.auto.tests.api.SingleUserApiGetTestV1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

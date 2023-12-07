@@ -7,7 +7,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class RestApiUtils {
 	
-	public void getAPI() {
+	public Response getAPI() {
 		
 		// Specify the base URL to the RESTful web service 
 		RestAssured.baseURI = "http://reqres.in/api/users/2"; 
@@ -17,8 +17,9 @@ public class RestApiUtils {
 		//In this case the request does not take any parameters 
 		Response response = httpRequest.request(Method.GET, "");
 		// Print the status and message body of the response received from the server 
-		System.out.println("Status received => " + response.getStatusCode()); 
-		System.out.println("Response=>" + response.prettyPrint());
+		//System.out.println("Status received => " + response.getStatusCode()); 
+		//System.out.println("Response=>" + response.prettyPrint());
+		return response;
 	}
 	
 	public void getAPI1() {

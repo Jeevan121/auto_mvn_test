@@ -10,7 +10,7 @@ public class SingleUserApiGetTest {
 	@Test
 	public void singleUserApiGetTest() {
 		RestApiUtils restApiUtils = new RestApiUtils();
-		restApiUtils.getAPI1();
+		restApiUtils.getAPI();
 	}
 
 }
