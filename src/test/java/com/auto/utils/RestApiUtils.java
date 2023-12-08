@@ -13,15 +13,52 @@ public class RestApiUtils {
 		RestAssured.baseURI = "http://reqres.in/api/users/2"; 
 		// Get the RequestSpecification of the request to be sent to the server. 
 		RequestSpecification httpRequest = RestAssured.given(); 
-		// specify the method type (GET) and the parameters if any. 
-		//In this case the request does not take any parameters 
 		Response response = httpRequest.request(Method.GET, "");
-		// Print the status and message body of the response received from the server 
-		//System.out.println("Status received => " + response.getStatusCode()); 
-		//System.out.println("Response=>" + response.prettyPrint());
 		return response;
 	}
 	
+	public Response getAPI(String apiEndPoint) {
+		
+		// Specify the base URL to the RESTful web service 
+		RestAssured.baseURI = apiEndPoint; 
+		// Get the RequestSpecification of the request to be sent to the server. 
+		RequestSpecification httpRequest = RestAssured.given(); 
+		Response response = httpRequest.request(Method.GET, "");
+		return response;
+	}
+	
+	public Response postApi(String apiEndPoint,String request,String apiComponet) {
+		// Specify the base URL to the RESTful web service 
+		RestAssured.baseURI = apiEndPoint; 
+		RequestSpecification httpRequest = RestAssured.given(); 
+		httpRequest.header("Content-Type", "application/json");
+		httpRequest.body(request);
+		Response res = httpRequest.post(apiComponet);
+		return res;
+		
+		
+	}
+	
+	public Response postApi1(String apiEndPoint,String request,String apiComponet) {
+		RestAssured.baseURI = apiEndPoint; 
+		RequestSpecification httpRequest = RestAssured.given(); 
+		Response response = httpRequest
+                .header("Content-type", "application/json")
+                .and()
+                .body(request)
+                .when()
+                .post("apiComponet")
+                .then()
+                .extract().response();
+		return response;
+	}
+	
+	
+	private RequestSpecification given() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public void getAPI1() {
 		   final RequestSpecification httpRequest = RestAssured.given();
 		    httpRequest.header("Content-Type", "application/json");
